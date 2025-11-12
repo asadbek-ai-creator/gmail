@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Marketing",
+    "email": "asadseytniyazov44@gmail.com"
+  },
+  {
+    "id": 2,
+    "name": "Finance",
+    "email": "finance@company.com"
+  },
+  {
+    "id": 3,
+    "name": "Human Resources",
+    "email": "hr@company.com"
+  },
+  {
+    "id": 4,
+    "name": "IT Support",
+    "email": "it@company.com"
+  },
+  {
+    "id": 5,
+    "name": "Sales",
+    "email": "sales@company.com"
+  }
+]
