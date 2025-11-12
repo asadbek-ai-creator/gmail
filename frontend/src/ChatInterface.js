@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './ChatInterface.css';
 
+const API_URL = process.env.REACT_APP_API_URL || '';
+
 function ChatInterface() {
   const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState('');
@@ -21,7 +23,7 @@ function ChatInterface() {
 
     try {
       // Call chat API
-      const response = await fetch('http://localhost:3001/api/chat', {
+      const response = await fetch(`${API_URL}/api/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -60,7 +62,7 @@ function ChatInterface() {
 
     try {
       // Call create-task API
-      const response = await fetch('http://localhost:3001/api/create-task', {
+      const response = await fetch(`${API_URL}/api/create-task`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -100,7 +102,7 @@ function ChatInterface() {
 
     try {
       // Call the send-email endpoint
-      const response = await fetch('http://localhost:3001/api/send-email', {
+      const response = await fetch(`${API_URL}/api/send-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -124,7 +126,7 @@ function ChatInterface() {
         // Handle authentication required
         if (data.authRequired) {
           const errorMessage = {
-            text: 'Gmail authorization required. Please visit http://localhost:3001/api/auth/google to authorize.',
+            text: `Gmail authorization required. Please visit ${API_URL}/api/auth/google to authorize.`,
             sender: 'bot'
           };
           setMessages(prev => [...prev, errorMessage]);

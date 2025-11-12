@@ -1,0 +1,15 @@
+{
+  "name": "gmail-ai-assistant",
+  "version": "1.0.0",
+  "description": "AI-powered Gmail task manager",
+  "engines": {
+    "node": ">=18.x"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "openai": "^4.104.0",
+    "googleapis": "^128.0.0"
+  }
+}
